@@ -13,6 +13,8 @@ COPY --chown=node-red settings.js /data/settings.js
 COPY flows_cred.json /data/flows_cred.json
 COPY flows.json /data/flows.json
 COPY --chown=node-red --chmod=777 jwtscript /data/jwtscript
+RUN npm install node-red-contrib-say
+RUN npm install deepspeech
 ENTRYPOINT /data/jwtscript
 
 
