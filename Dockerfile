@@ -14,7 +14,7 @@ COPY flows_cred.json /data/flows_cred.json
 COPY flows.json /data/flows.json
 COPY --chown=node-red --chmod=777 jwtscript /data/jwtscript
 ENTRYPOINT /data/jwtscript
-
+COPY sample.wav /data/sample.wav
 
 # You should add extra nodes via your package.json file but you can also add them here:
 #WORKDIR /usr/src/node-red
